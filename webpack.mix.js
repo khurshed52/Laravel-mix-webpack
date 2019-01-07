@@ -11,7 +11,26 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/app.js', 'dist/app.min.js').styles('src/app.css', 'dist/all.css');
+
+mix.js([
+    'src/js/jquery-3.1.1.min.js',
+    'src/js/wow.min.js',
+    'src/js/owl.carousel.min.js',
+    'src/js/superfish.js',
+    'src/js/easyaspie.min.js',
+    'src/js/swiper.min.js',
+    'src/js/index.js'
+], 'dist/js/app.min.js')
+ .styles([
+    'src/css/animate.js',
+    'src/css/bootstrap.css',
+    'src/css/font-awesome.min.css',
+    'src/css/swiper.css',
+    'src/css/owl.carousel.min.css',
+    'src/css/owl.theme.default.min.css',
+    'src/css/menu.css',
+    'src/css/style.css'
+], 'dist/css/all.css');
 
 // Full API
 // mix.js(src, output);
